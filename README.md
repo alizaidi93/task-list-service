@@ -25,7 +25,7 @@ Task-List-Service is a simple Go service utilising hexagonal architecture design
 
 [Here is a  good article to run up postgres locally through a docker container.](https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198)
 
-```
+```sql
 CREATE TABLE "public"."todo_list" (
     "id" SERIAL NOT NULL,
     "uuid" varchar NOT NULL,
@@ -62,6 +62,7 @@ Headers : content-type=application/json
 
 Headers : content-type=application/json
 
+```json
 {
     "Id": 19,
     "Uuid": "335979c6-b5b2-4e6d-87da-4bdf8bc5d5f8",
@@ -71,7 +72,7 @@ Headers : content-type=application/json
     "ModifiedBy": "AyZee",
     "ModifiedOn": "2022-02-22T23:46:19.286798Z"
 }
-
+```
 
 ## Return all tasks created by user
 
@@ -86,7 +87,8 @@ Headers : content-type=application/json
 ### Response
 
 Headers : content-type=application/json
-
+ 
+```json
 [
     {
         "Id": 19,
@@ -116,7 +118,7 @@ Headers : content-type=application/json
         "ModifiedOn": "2022-02-23T00:09:58.7378Z"
     }
 ]
-
+```
 
 ## Creates task
 
@@ -128,17 +130,20 @@ POST /task/
 
 Headers : content-type=application/json
 
+```json
 {
 "Task": "Hello, Task World!",
 "Completed": false
 }
+```
 
 ### Response
 
 Headers : content-type=application/json
 
+```
 335979c6-b5b2-4e6d-87da-4bdf8bc5d5f8
-
+```
 
 ## Update a task
 
@@ -150,10 +155,12 @@ POST /task/update
 
 Headers : content-type=application/json
 
+```json
 {
 "Uuid": "335979c6-b5b2-4e6d-87da-4bdf8bc5d5f8",
 "Completed": true
 }
+```
 
 ### Response
 
