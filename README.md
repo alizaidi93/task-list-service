@@ -1,7 +1,23 @@
-# Task-list-Service
+# Task-List-Service
 
 Task-List-Service is a simple Go service utilising hexagonal architecture design with Gorilla Mux & Postgres.
 
+## Table of Contents  
+
+- [Database table structure](#database-table-structure)
+- [Running the service](#running-the-service)
+- [Return task by UUID](#return-task-by-uuid)
+  * [Request](#request)
+  * [Response](#response)
+- [Return all tasks created by user](#return-all-tasks-created-by-user)
+  * [Request](#request-1)
+  * [Response](#response-1)
+- [Creates task](#creates-task)
+  * [Request](#request-2)
+  * [Response](#response-2)
+- [Update a task](#update-a-task)
+  * [Request](#request-3)
+  * [Response](#response-3)
 
 ## Database table structure
 
@@ -36,7 +52,7 @@ CREATE TABLE "public"."todo_list" (
 
 Retreives a task specified by a Uuid.
 
-### GET /task/{uuid} 
+GET /task/{uuid} 
 
 ### Request
 
@@ -61,7 +77,7 @@ Headers : content-type=application/json
 
 Retreives all tasks created by the supplied user.
 
-### GET /task/{user}
+GET /task/{user}
 
 ### Request
 
@@ -106,7 +122,7 @@ Headers : content-type=application/json
 
 Create a task to persist to the database. Returns UUID of task.
 
-### POST /task/
+POST /task/
 
 ### Request
 
@@ -128,7 +144,7 @@ Headers : content-type=application/json
 
 Updates a task by specifying Uuid and completion status. 
 
-### POST /task/update
+POST /task/update
 
 ### Request
 
