@@ -36,13 +36,13 @@ CREATE TABLE "public"."todo_list" (
 
 Retreives a task specified by a Uuid.
 
-# GET /task/{uuid} 
+### GET /task/{uuid} 
 
-# Request
+### Request
 
 Headers : content-type=application/json
 
-# Response
+### Response
 
 Headers : content-type=application/json
 
@@ -61,13 +61,13 @@ Headers : content-type=application/json
 
 Retreives all tasks created by the supplied user.
 
-# GET /task/{user}
+### GET /task/{user}
 
-# Request
+### Request
 
 Headers : content-type=application/json
 
-# Response
+### Response
 
 Headers : content-type=application/json
 
@@ -106,9 +106,9 @@ Headers : content-type=application/json
 
 Create a task to persist to the database. Returns UUID of task.
 
-# POST /task/
+### POST /task/
 
-# Request
+### Request
 
 Headers : content-type=application/json
 
@@ -117,7 +117,7 @@ Headers : content-type=application/json
 "Completed": false
 }
 
-# Response
+### Response
 
 Headers : content-type=application/json
 
@@ -128,9 +128,9 @@ Headers : content-type=application/json
 
 Updates a task by specifying Uuid and completion status. 
 
-# POST /task/update
+### POST /task/update
 
-# Request
+### Request
 
 Headers : content-type=application/json
 
@@ -139,6 +139,6 @@ Headers : content-type=application/json
 "Completed": true
 }
 
-# Response
+### Response
 
 204 - No Content
